@@ -22,23 +22,27 @@ public class SchedulerController {
 
 	@Autowired
 	ScheduleServ schedulerserv;
-		
+//	Get	
 	@GetMapping
 	public Iterable <Schedule> getSchedule() {
 		return schedulerserv.getSchedule();
 		}
+//	Get By ID
 	@GetMapping("/{id}")
 	public Schedule findSchedule(@PathVariable Long id) {
 		return schedulerserv.findSchedule(id);
 	}
+//	Post
 	@PostMapping
 	public Schedule createSchedule(@RequestBody Schedule item) {
 		return schedulerserv.createSchedule(item);
 		}
+//	Delete
 	@DeleteMapping("/{id}")
 	public HttpStatus deleteSchedule(@PathVariable Long id) {
 		return schedulerserv.deleteSchedule(id);
 	}
+//	Update
 	@PatchMapping
 	public Schedule updateSchedule(@RequestBody Schedule item) {
 		return schedulerserv.updateSchedule(item);

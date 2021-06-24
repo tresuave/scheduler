@@ -15,15 +15,26 @@ function Nav(props) {
     return (
         <div>
             <nav >
-             <Link to="/">  
-           
-            </Link> 
+            
             <ul style={navStyle}>
+                <Link to="/">  
+                 <li>Home</li>
+                 </Link> 
+
                 <Link to="/create">
                 <li>Create Schedule</li>
                 </Link>
+
                 <Link to="/schedule">  
                 <li>Schedule</li>
+                </Link>
+
+                <Link to="/createmood">
+                <li>Create Mood</li>
+                </Link>
+                
+                <Link to="/tracker">  
+                <li>Mood Tracker</li>
                 </Link>
               
             </ul>
