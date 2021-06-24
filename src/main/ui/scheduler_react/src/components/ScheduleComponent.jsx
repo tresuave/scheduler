@@ -43,15 +43,15 @@ componentDidMount(){
                             schedulePiece=>
                             <tr key = {schedulePiece.id}>
                                 
-                                <td>{schedulePiece.week}</td>
-                                <td>{schedulePiece.monday}</td>
-                                <td>{schedulePiece.tuesday}</td>
-                                <td>{schedulePiece.wednesday}</td>
-                                <td>{schedulePiece.thursday}</td>
-                                <td>{schedulePiece.friday}</td>
-                                <td>{schedulePiece.saturday}</td>
-                                <td>{schedulePiece.sunday}</td>
-                                
+                                <td className="schedule">{schedulePiece.week}</td>
+                                <td className="schedule">{schedulePiece.monday}</td>
+                                <td className="schedule">{schedulePiece.tuesday}</td>
+                                <td className="schedule">{schedulePiece.wednesday}</td>
+                                <td className="schedule">{schedulePiece.thursday}</td>
+                                <td className="schedule">{schedulePiece.friday}</td>
+                                <td className="schedule">{schedulePiece.saturday}</td>
+                                <td className="schedule">{schedulePiece.sunday}</td>
+
                                 <button onClick={()=>{}}></button>
             
                             </tr>
@@ -62,6 +62,8 @@ componentDidMount(){
                   </table> 
             </div>
         );
+
+        
     }
 }
 
