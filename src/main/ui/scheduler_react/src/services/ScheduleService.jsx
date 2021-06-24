@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-SERVICE_DOM = "http://localhost:8000/schedule"
+const SERVICE_DOM = "http://localhost:8000/schedule"
 
 class ScheduleService {
     getSchedule(){

@@ -3,19 +3,31 @@ import ScheduleService from '../services/ScheduleService';
 import axios from 'axios';
 
 class ScheduleComponent extends Component {
-    constructor(){
-        super ()
+    constructor(props){
+        super (props)
         this.state = {
-            week: '',
-            monday:'',
-            tuesday
+           scheduleData:[]
         }
     };
 
+componentDidMount(){
+    ScheduleService.getSchedule().then((response)=>{
+        this.setState({
+            scheduleData: response.data
+        })
+    })
+}
+   
     render() {
         return (
             <div>
+              <h1>Schedule</h1> 
+              <table>
                 
+
+
+                  
+                  </table> 
             </div>
         );
     }
