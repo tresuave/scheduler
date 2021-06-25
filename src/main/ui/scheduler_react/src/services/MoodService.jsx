@@ -10,6 +10,7 @@ class MoodService {
     createMood(){
         return axios.post(MOOD_SERVICE)
     }
+    
 }
 
 export default new MoodService();

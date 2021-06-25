@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MoodService from '../services/MoodService';
+import axios from 'axios';
 
 
 class MoodTracker extends Component {
@@ -10,7 +11,12 @@ class MoodTracker extends Component {
            MoodData:[]
         }
     };
-
+    deleteMood(id){
+        axios.delete(`http://localhost:8000/mood/${id}`)
+        window.location.reload();
+    
+    }
+    
     // will mount Schedules from the database
 componentDidMount(){
     MoodService.getMood().then((response)=>{
@@ -19,7 +25,7 @@ componentDidMount(){
         })
     })
 }
-   
+
     render() {
         return (
             <div>
@@ -52,7 +58,8 @@ componentDidMount(){
                                 <td className="mood">{Mood.saturday}</td>
                                 <td className="mood">{Mood.sunday}</td>
                                 <td>
-                                <button onClick={()=>{}}></button>
+                                <button onClick={()=>{this.deleteMood(Mood.id)}}>Delete</button>
+                              
                                 </td>
                             </tr>
                         )

@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Nav from './components/Nav';
 import MoodAdder from './components/MoodAdder';
 import MoodTracker from './components/MoodTracker';
+import Home from './components/Home';
 
 
 
@@ -34,10 +35,5 @@ class App extends React.Component {
   
   }
 
-  const Home = () => (
-    <div>
-      <h1>Home</h1>
-    </div>
-  )
   
 export default App;

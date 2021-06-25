@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import MoodService from '../services/MoodService';
+
 
 class MoodAdder extends React.Component {
     constructor(props) {
@@ -86,24 +86,26 @@ handleChangeSunday(event){
           </label>
           <label>
             Monday:
-            <select value={this.state.monday} onChange={this.handleChangeMonday}>
-            <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
-            <option value="😐">😐</option>
-            <option value="😎">😎</option>
-            <option value="🤬">🤬</option>
-            <option value="🤑">🤑</option>
-            <option value="🤡">🤡</option>
-            <option value="😴">😴</option>
-            <option value="🤧">🤧</option>
-            <option value="😈">😈</option>
-            <option value="😳">😳</option>  
+            <select value={this.state.monday} onChange={this.handleChangeMonday} >
+            <option value="👀">👀</option>
+            <option value="😀"> 😀 </option>
+            <option value="🙃">🙃 </option>
+            <option value="😐">😐 </option>
+            <option value="😎">😎 </option>
+            <option value="🤬">🤬 </option>
+            <option value="🤑">🤑 </option>
+            <option value="🤡">🤡 </option>
+            <option value="😴">😴 </option>
+            <option value="🤧">🤧 </option>
+            <option value="😈">😈 </option>
+            <option value="😳">😳 </option>  
           </select>
     
           </label>
           <label>
             Tuesday:
             <select value={this.state.tuesday} onChange={this.handleChangeTuesday}>
+            <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
             <option value="😐">😐</option>
@@ -120,6 +122,7 @@ handleChangeSunday(event){
           <label>
             Wednesday:
             <select value={this.state.wednesday} onChange={this.handleChangeWednesday}>
+            <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
             <option value="😐">😐</option>
@@ -136,6 +139,7 @@ handleChangeSunday(event){
           <label>
             Thursday:
             <select value={this.state.thursday} onChange={this.handleChangeThursday}>
+            <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
             <option value="😐">😐</option>
@@ -151,15 +155,54 @@ handleChangeSunday(event){
           </label>
           <label>
             Friday:
-            <input type="text" value={this.state.friday} onChange={this.handleChangeFriday} />
+            <select value={this.state.friday} onChange={this.handleChangeFriday}>
+            <option value="👀">👀</option>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
           </label>
           <label>
             Saturday:
-            <input type="text" value={this.state.saturday} onChange={this.handleChangeSaturday} />
+            <select value={this.state.saturday} onChange={this.handleChangeSaturday}>
+            <option value="👀">👀</option>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
           </label>
           <label>
             Sunday:
-            <input type="text" value={this.state.sunday} onChange={this.handleChangeSunday} />
+            <select value={this.state.sunday} onChange={this.handleChangeSuday}>
+            <option value="👀">👀</option>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
           </label>
           <input type="submit" value="Submit" />
         </form>
