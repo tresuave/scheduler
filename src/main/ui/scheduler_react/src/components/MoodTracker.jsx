@@ -6,7 +6,7 @@ import axios from 'axios';
 class MoodTracker extends Component {
     constructor(props){
         super (props)
-        // make use of state
+        // makes use of state
         this.state = {
            MoodData:[]
         }
