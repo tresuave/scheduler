@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-const SERVICE_DOM = "http://localhost:8000/mood"
+const MOOD_SERVICE = "http://localhost:8000/mood"
 
 class MoodService {
-    getSchedule(){
-        return axios.get(SERVICE_DOM)
+    getMood(){
+        return axios.get(MOOD_SERVICE)
     }
 
-    createSchedule(){
-        return axios.post(SERVICE_DOM)
+    createMood(){
+        return axios.post(MOOD_SERVICE)
     }
 }
 

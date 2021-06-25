@@ -1,122 +1,70 @@
-import React from 'react';
-import axios from 'axios';
-import ScheduleService from '../services/ScheduleService';
+import React, { Component } from 'react';
+import MoodService from '../services/MoodService';
 
-class MoodTracker extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {week: '',
-                    monday:'',
-                    tuesday:'',
-                    wednesday:'',
-                    thursday:'',
-                    friday:'',
-                    saturday:'',
-                    sunday:''
-                  };
-  
-      this.handleChangeWeek = this.handleChangeWeek.bind(this);
-      this.handleChangeMonday = this.handleChangeMonday.bind(this);
-      this.handleChangeTuesday= this.handleChangeTuesday.bind(this);
-      this.handleChangeWednesday = this.handleChangeWednesday.bind(this);
-      this.handleChangeThursday = this.handleChangeThursday.bind(this);
-      this.handleChangeFriday = this.handleChangeFriday.bind(this);
-      this.handleChangeSaturday = this.handleChangeSaturday.bind(this);
-      this.handleChangeSunday = this.handleChangeSunday.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChangeWeek(event){
-     console.log()
-     this.setState({week: event.target.value})
 
-   }
-   handleChangeMonday(event){
-    this.setState({monday: event.target.value})
-  }
-  handleChangeTuesday(event){
-    this.setState({tuesday: event.target.value})
-  }
-  handleChangeWednesday(event){
-    this.setState({wednesday: event.target.value})
-  }
-  handleChangeThursday(event){
-      this.setState({thursday: event.target.value})
-  }
-  handleChangeFriday(event){
-    this.setState({friday: event.target.value})
-}
-handleChangeSaturday(event){
-    this.setState({saturday: event.target.value})
-}
-handleChangeSunday(event){
-    this.setState({sunday: event.target.value})
-}
-  
-    handleSubmit(event) {
-      alert('A mood was submitted');
-      event.preventDefault();
-      const data = {
-        week: this.state.week,
-        monday: this.state.monday,
-        tuesday: this.state.tuesday,
-        wednesday: this.state.wednesday,
-        thursday: this.state.thursday,
-        friday: this.state.friday,
-        saturday: this.state.saturday,
-        sunday: this.state.sunday
+class MoodTracker extends Component {
+    constructor(props){
+        super (props)
+        // make use of state
+        this.state = {
+           MoodData:[]
+        }
+    };
 
-      }
-      
-      axios.post('http://localhost:8000/mood',data)
-        .then(response =>{
-          console.log(response);
-          console.log(response,data)
-          window.location.reload();
+    // will mount Schedules from the database
+componentDidMount(){
+    MoodService.getMood().then((response)=>{
+        this.setState({
+            MoodData: response.data
         })
-    
-    }
-  
+    })
+}
+   
     render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Week:
-            <input type="text" value={this.state.week} onChange={this.handleChangeWeek} />
-          </label>
-          <label>
-            Monday:
-            <input type="text" value={this.state.monday} onChange={this.handleChangeMonday} />
-          </label>
-          <label>
-            Tuesday:
-            <input type="text" value={this.state.tuesday} onChange={this.handleChangeTuesday} />
-          </label>
-          <label>
-            Wednesday:
-            <input type="text" value={this.state.wednesday} onChange={this.handleChangeWednesday} />
-          </label>
-          <label>
-            Thursday:
-            <input type="text" value={this.state.thursday} onChange={this.handleChangeThursday} />
-          </label>
-          <label>
-            Friday:
-            <input type="text" value={this.state.friday} onChange={this.handleChangeFriday} />
-          </label>
-          <label>
-            Saturday:
-            <input type="text" value={this.state.saturday} onChange={this.handleChangeSaturday} />
-          </label>
-          <label>
-            Sunday:
-            <input type="text" value={this.state.sunday} onChange={this.handleChangeSunday} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      );
-    }
-  }
+        return (
+            <div>
+              <h1>Mood Tracker</h1> 
+              <table>
+                  <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th> Sunday</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {
+                        this.state.MoodData.map(
+                            Mood=>
+                            <tr key = {Mood.id}>
+                                
+                                <td className="mood">{Mood.week}</td>
+                                <td className="mood">{Mood.monday}</td>
+                                <td className="mood">{Mood.tuesday}</td>
+                                <td className="mood">{Mood.wednesday}</td>
+                                <td className="mood">{Mood.thursday}</td>
+                                <td className="mood">{Mood.friday}</td>
+                                <td className="mood">{Mood.saturday}</td>
+                                <td className="mood">{Mood.sunday}</td>
 
+                                <button onClick={()=>{}}></button>
+            
+                            </tr>
+                        )
+                    }
+                </tbody>
+                  
+                  </table> 
+            </div>
+        );
+
+        
+    }
+}
 
 export default MoodTracker;
