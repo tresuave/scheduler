@@ -58,3 +58,30 @@ nav{
 li{
   list-style:none;
 }
+iframe{
+  border-radius:30% 0%;
+  border:5px solid white;
+  width:70vw;
+}
+img{
+  height:70px;
+  width:70px;
+}
+img:hover{
+  height:60px;
+  width:60px;
+  background-color: thistle;
+}
+button{
+  width:100px;
+  color:rgb(178, 236, 85);
+  background-color: rgb(4, 92, 92);
+  height:40px;
+  box-shadow: 1px 1px 25px .5px rgb(75, 30, 30);
+  font-family: inherit;
+}
+button:hover{
+  background-color: violet;
+  font-family:inherit;
+  
+}
