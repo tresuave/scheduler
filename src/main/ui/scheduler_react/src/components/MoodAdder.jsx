@@ -99,19 +99,55 @@ handleChangeSunday(event){
             <option value="😈">😈</option>
             <option value="😳">😳</option>  
           </select>
-            <input type="text" value={this.state.monday} onChange={this.handleChangeMonday} />
+    
           </label>
           <label>
             Tuesday:
-            <input type="text" value={this.state.tuesday} onChange={this.handleChangeTuesday} />
+            <select value={this.state.tuesday} onChange={this.handleChangeTuesday}>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
           </label>
           <label>
             Wednesday:
-            <input type="text" value={this.state.wednesday} onChange={this.handleChangeWednesday} />
+            <select value={this.state.wednesday} onChange={this.handleChangeWednesday}>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
           </label>
           <label>
             Thursday:
-            <input type="text" value={this.state.thursday} onChange={this.handleChangeThursday} />
+            <select value={this.state.thursday} onChange={this.handleChangeThursday}>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
           </label>
           <label>
             Friday:
