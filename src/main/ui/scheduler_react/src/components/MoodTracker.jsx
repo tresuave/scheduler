@@ -29,6 +29,7 @@ componentDidMount(){
     render() {
         return (
             <div>
+                {/* table for the mood tracker */}
               <h1>Mood Tracker</h1> 
               <table>
                   <thead>
@@ -47,6 +48,7 @@ componentDidMount(){
                     {
                         this.state.MoodData.map(
                             Mood=>
+                            // id makes the application work
                             <tr key = {Mood.id}>
                                 
                                 <td className="mood">{Mood.week}</td>
