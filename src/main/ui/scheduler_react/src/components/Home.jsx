@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const key= 'AIzaSyCcTwkA8w7C5qU7_-AYwGpFuoIFcNTdkPg';
-const query ='energy+mix';
+const query ='planning';
 const result= 3;
 
 var finalURL = `https://www.googleapis.com/youtube/v3/search?maxResults=${result}&order=date&q=${query}&key=${key}`
