@@ -2,7 +2,6 @@ package com.app.scheduler.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.scheduler.model.Schedule;
 import com.app.scheduler.service.ScheduleServ;
 
-//@CrossOrigin
+
 @RestController
 @RequestMapping("/schedule")
 public class SchedulerController {
