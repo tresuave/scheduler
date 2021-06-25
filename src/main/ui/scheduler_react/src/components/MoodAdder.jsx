@@ -86,6 +86,19 @@ handleChangeSunday(event){
           </label>
           <label>
             Monday:
+            <select value={this.state.monday} onChange={this.handleChangeMonday}>
+            <option value="😀">😀</option>
+            <option value="🙃">🙃"</option>
+            <option value="😐">😐</option>
+            <option value="😎">😎</option>
+            <option value="🤬">🤬</option>
+            <option value="🤑">🤑</option>
+            <option value="🤡">🤡</option>
+            <option value="😴">😴</option>
+            <option value="🤧">🤧</option>
+            <option value="😈">😈</option>
+            <option value="😳">😳</option>  
+          </select>
             <input type="text" value={this.state.monday} onChange={this.handleChangeMonday} />
           </label>
           <label>
