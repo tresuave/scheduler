@@ -3,20 +3,13 @@ import React from 'react';
 import {Link} from "react-router-dom"
 
 function Nav(props) {
-    const navStyle ={
-        display:"block",
-        float: "left",
-        padding: "14px 16px",
-        margin: "10px",
-        border: "1px solid #bbb"
-
-       
-    }
+  
+    
     return (
         <div>
             <nav >
             
-            <ul style={navStyle}>
+            <ul>
                 <Link to="/">  
                  <li>Home</li>
                  </Link> 
@@ -32,7 +25,7 @@ function Nav(props) {
                 <Link to="/createmood">
                 <li>Create Mood</li>
                 </Link>
-                
+
                 <Link to="/tracker">  
                 <li>Mood Tracker</li>
                 </Link>

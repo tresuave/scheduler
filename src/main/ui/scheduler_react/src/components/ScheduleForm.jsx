@@ -5,6 +5,7 @@ import ScheduleService from '../services/ScheduleService';
 class ScheduleForm extends React.Component {
     constructor(props) {
       super(props);
+    //   represents the data to be added with axios
       this.state = {week: '',
                     monday:'',
                     tuesday:'',
@@ -14,7 +15,7 @@ class ScheduleForm extends React.Component {
                     saturday:'',
                     sunday:''
                   };
-  
+//   binds the input while typing
       this.handleChangeWeek = this.handleChangeWeek.bind(this);
       this.handleChangeMonday = this.handleChangeMonday.bind(this);
       this.handleChangeTuesday= this.handleChangeTuesday.bind(this);
@@ -25,7 +26,7 @@ class ScheduleForm extends React.Component {
       this.handleChangeSunday = this.handleChangeSunday.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
+//   captures the keyboard movements
     handleChangeWeek(event){
      console.log()
      this.setState({week: event.target.value})
@@ -52,7 +53,7 @@ handleChangeSaturday(event){
 handleChangeSunday(event){
     this.setState({sunday: event.target.value})
 }
-  
+//   submits the data to state
     handleSubmit(event) {
       alert('A task was submitted');
       event.preventDefault();
@@ -79,6 +80,7 @@ handleChangeSunday(event){
   
     render() {
       return (
+        //   represents the input of the schedule
         <form onSubmit={this.handleSubmit}>
           <label>
             Week:
