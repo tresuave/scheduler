@@ -56,7 +56,7 @@ handleChangeSunday(event){
     handleSubmit(event) {
       alert('A mood was submitted');
       event.preventDefault();
-      const data = {
+      const pass = {
         week: this.state.week,
         monday: this.state.monday,
         tuesday: this.state.tuesday,
@@ -68,10 +68,10 @@ handleChangeSunday(event){
 
       }
       
-      axios.post('http://localhost:8000/mood',data)
+      axios.post('http://localhost:8000/mood',pass)
         .then(response =>{
           console.log(response);
-          console.log(response,data);
+          console.log(response,pass);
           window.location.reload();
         })
     

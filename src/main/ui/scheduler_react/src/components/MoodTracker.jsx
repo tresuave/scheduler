@@ -51,9 +51,9 @@ componentDidMount(){
                                 <td className="mood">{Mood.friday}</td>
                                 <td className="mood">{Mood.saturday}</td>
                                 <td className="mood">{Mood.sunday}</td>
-
+                                <td>
                                 <button onClick={()=>{}}></button>
-            
+                                </td>
                             </tr>
                         )
                     }
