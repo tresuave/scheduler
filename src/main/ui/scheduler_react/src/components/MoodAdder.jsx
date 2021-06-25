@@ -71,7 +71,7 @@ handleChangeSunday(event){
       axios.post('http://localhost:8000/mood',data)
         .then(response =>{
           console.log(response);
-          console.log(response,data)
+          console.log(response,data);
           window.location.reload();
         })
     
