@@ -94,7 +94,23 @@ handleChangeSunday(event){
           </label>
           <label>
             Wednesday:
-            <input type="text" value={this.state.wednesday} onChange={this.handleChangeImage} />
+            <input type="text" value={this.state.wednesday} onChange={this.handleChangeWednesday} />
+          </label>
+          <label>
+            Thursday:
+            <input type="text" value={this.state.thursday} onChange={this.handleChangeThursday} />
+          </label>
+          <label>
+            Friday:
+            <input type="text" value={this.state.friday} onChange={this.handleChangeFriday} />
+          </label>
+          <label>
+            Saturday:
+            <input type="text" value={this.state.saturday} onChange={this.handleChangeSaturday} />
+          </label>
+          <label>
+            Sunday:
+            <input type="text" value={this.state.sunday} onChange={this.handleChangeSunday} />
           </label>
           <input type="submit" value="Submit" />
         </form>
