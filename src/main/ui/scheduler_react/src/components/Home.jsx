@@ -1,16 +1,42 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
-const key= 'AIzaSyCcTwkA8w7C5qU7_-AYwGpFuoIFcNTdkPg';
-const query ='planning';
-const result= 3;
 
-var finalURL = `https://www.googleapis.com/youtube/v3/search?maxResults=${result}&order=date&q=${query}&key=${key}`
+
+const horoscope = "/horoscope/today/"
+const chart ={
+ aries :"aries",
+taurus:"taurus",
+gemini :"gemini",
+cancer :"cancer",
+leo :"leo",
+virgo :"virgo",
+libra :"libra",
+scorpio :"scorpio",
+sagittarius : "sagittarius",
+capricorn :"capricorn",
+aquarius :"aquarius",
+pisces :"pisces"
+}
+var finalurl=`http://horoscope-api.herokuapp.com${horoscope}`
+
 
 class Home extends Component {
     constructor(props){
         super()
         this.state = {
-            more: [],
+            one: [],
+            two:[],
+            three:[],
+            four:[],
+            five:[],
+            six:[],
+            seven:[],
+            eight:[],
+            nine:[],
+            ten:[],
+            eleven:[],
+            twelve:[],
             isLoaded: false
         };
         this.clicked = this.clicked.bind(this);
@@ -21,35 +47,39 @@ class Home extends Component {
              display:none;</style>
 
      }   
-    clicked(){
-        fetch(finalURL)
-    .then((response) => response.json())
-    .then((json) => {
-        const more = json.items.map(obj => "https:youtube.com/embed/"+obj.id.videoId);
-        this.setState({more});
-        ;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+    clicked=()=>{
+        axios.all(finalurl+chart.aquarius,finalurl+chart.aries,finalurl+chart.cancer,finalurl+chart.capricorn,finalurl+chart.gemini,finalurl+chart.leo,finalurl+chart.libra,finalurl+chart.pisces,finalurl+chart.sagittarius, finalurl+chart.scorpio+finalurl+chart.taurus+finalurl+chart.virgo)
+    .then(axios.spread((...response=> {
+        
     }
+         this.setState({more: response.data}
+            )
+    )
+ 
+}
    
     render() {
-        console.log(this.state.more)
+        
         return (
             <div>
-
-
-                  {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/oQKKCXXRcKE?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               <button onClick={this.clicked}> Find More videos</button>  <button onClick={this.close}> Collapse</button>
-               {
-                this.state.more.map((link,i)=> {
-                    var frame =  <div key={i} className="moreVideos" > <iframe width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe></div>
-                   return frame;
-                  
-                })
-            }
-           {this.frame} */}
+                <button onClick={this.clicked}></button>
+                    <table>
+                        <thead>
+                        <tr>
+                        <th>Sign</th>
+                        <th>Horscope</th>
+                       
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                          <td>{this.state.more.sunsign}</td>       
+                        <td>{this.state.more.horoscope}</td>
+                        
+                        </tr>
+                        </tbody>
+                    </table>
+                    
             
             
             </div>
