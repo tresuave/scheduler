@@ -92,7 +92,7 @@ handleChangeSunday(event){
             Monday:
             <select class="custom-select" value={this.state.monday} onChange={this.handleChangeMonday} >
             <option value="👀">👀</option>
-            <option value="😀"> 😀 </option>
+            <option value="😀"> 😀</option>
             <option value="🙃">🙃 </option>
             <option value="😐">😐 </option>
             <option value="😎">😎 </option>
@@ -114,7 +114,7 @@ handleChangeSunday(event){
             <select class="custom-select" value={this.state.tuesday} onChange={this.handleChangeTuesday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
+            <option value="🙃">🙃</option>
             <option value="😐">😐</option>
             <option value="😎">😎</option>
             <option value="🤬">🤬</option>
@@ -134,7 +134,7 @@ handleChangeSunday(event){
             <select class="custom-select" value={this.state.wednesday} onChange={this.handleChangeWednesday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
+            <option value="🙃">🙃</option>
             <option value="😐">😐</option>
             <option value="😎">😎</option>
             <option value="🤬">🤬</option>
@@ -154,7 +154,7 @@ handleChangeSunday(event){
             <select class="custom-select" value={this.state.thursday} onChange={this.handleChangeThursday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
+            <option value="🙃">🙃</option>
             <option value="😐">😐</option>
             <option value="😎">😎</option>
             <option value="🤬">🤬</option>
@@ -174,7 +174,7 @@ handleChangeSunday(event){
             <select class="custom-select" value={this.state.friday} onChange={this.handleChangeFriday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
+            <option value="🙃">🙃</option>
             <option value="😐">😐</option>
             <option value="😎">😎</option>
             <option value="🤬">🤬</option>
@@ -195,7 +195,7 @@ handleChangeSunday(event){
             <select class="custom-select" value={this.state.saturday} onChange={this.handleChangeSaturday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
+            <option value="🙃">🙃</option>
             <option value="😐">😐</option>
             <option value="😎">😎</option>
             <option value="🤬">🤬</option>

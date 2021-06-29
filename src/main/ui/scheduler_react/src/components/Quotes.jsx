@@ -24,11 +24,11 @@ inspire=()=> {
 
 render(){
     return (
-<div>
+<div className="card jumbotron">
 
-<button onClick={this.inspire}></button>
+<button class="btn-primary btn-sm" onClick={this.inspire}>Inspiration</button>
 {this.state.quoteData.map((quote,i)=>{
-    var print = <div key={i}>
+    var print = <div class="display-3 card-body" key={i}>
         {quote.q}-{quote.a}
         </div>
         return print
