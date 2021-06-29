@@ -113,7 +113,7 @@ class Home extends Component {
        
         return (
             <div className="card">
-                <button className="btn btn-primary"onClick={this.clicked}></button>
+                <button className="btn btn-primary"onClick={this.clicked}>Aquarius</button>
                     <table>
                         <thead>
                         <tr>

@@ -9,29 +9,29 @@ function Nav(props) {
         <div>
             <nav >
             
-            <ul>
+            <ul className="nav nav-tabs">
                 <Link to="/">  
-                 <li>Home</li>
+                 <li className="nav-item"><a className="nav-link active">Home</a> </li>
                  </Link> 
 
                 <Link to="/create">
-                <li>Create Schedule</li>
+                <li className="nav-item"><a className="nav-link">Create Schedule</a></li>
                 </Link>
 
                 <Link to="/schedule">  
-                <li>Schedule</li>
+                <li className="nav-item"><a className="nav-link">Schedule</a></li>
                 </Link>
 
                 <Link to="/createmood">
-                <li>Create Mood</li>
+                <li className="nav-item"><a className="nav-link">Create Mood</a></li>
                 </Link>
 
                 <Link to="/tracker">  
-                <li>Mood Tracker</li>
+                <li className="nav-item"><a className="nav-link">Mood Tracker</a></li>
                 </Link>
 
                 <Link to="/quotes">  
-                <li>Quotes</li>
+                <li className="nav-item"><a className="nav-link">Quotes</a></li>
                 </Link>
               
             </ul>
