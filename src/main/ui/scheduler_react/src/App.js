@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import MoodAdder from './components/MoodAdder';
 import MoodTracker from './components/MoodTracker';
 import Home from './components/Home';
+import Quotes from './components/Quotes';
 
 
 
@@ -26,6 +27,7 @@ class App extends React.Component {
       <Route path = "/schedule" component={ScheduleComponent} />
       <Route path = "/createmood" component={MoodAdder} />
       <Route path = "/tracker" component={MoodTracker} />
+      <Route path = "/quotes" component={Quotes} />
         </Switch>
         
       </div>

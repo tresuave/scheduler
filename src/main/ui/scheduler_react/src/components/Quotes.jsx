@@ -1,0 +1,47 @@
+import React, {Component} from 'react';
+import axios from 'axios';
+
+const API = 'https://zenquotes.io/api/';
+const mode ='random';
+
+var finalapi =`${API}${mode}`
+class Quotes extends Component {
+    constructor(props){
+        super()
+        this.state = {
+           quoteData:[],
+            isLoaded: false,
+            errorMessage:[]
+        };
+    }   
+
+inspire=()=> {
+    axios.get(finalapi)
+    .then(response => this.setState({ quoteData: response.data }))
+  
+}
+
+
+render(){
+    return (
+<div>
+
+<button onClick={this.inspire}></button>
+{this.state.quoteData.map((quote,i)=>{
+    var print = <div key={i}>
+        {quote.q}-{quote.a}
+        </div>
+        return print
+}
+)}
+</div>
+    );
+
+
+}
+
+
+
+}
+
+export default Quotes

@@ -29,6 +29,10 @@ function Nav(props) {
                 <Link to="/tracker">  
                 <li>Mood Tracker</li>
                 </Link>
+
+                <Link to="/quotes">  
+                <li>Quotes</li>
+                </Link>
               
             </ul>
             </nav>

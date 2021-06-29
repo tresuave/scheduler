@@ -15,7 +15,12 @@ class Home extends Component {
         };
         this.clicked = this.clicked.bind(this);
     }
-        
+     close(){
+         <style>
+          
+             display:none;</style>
+
+     }   
     clicked(){
         fetch(finalURL)
     .then((response) => response.json())
@@ -33,8 +38,10 @@ class Home extends Component {
         console.log(this.state.more)
         return (
             <div>
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/oQKKCXXRcKE?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               <button onClick={this.clicked}> Find More videos</button> 
+
+
+                  {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/oQKKCXXRcKE?start=8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <button onClick={this.clicked}> Find More videos</button>  <button onClick={this.close}> Collapse</button>
                {
                 this.state.more.map((link,i)=> {
                     var frame =  <div key={i} className="moreVideos" > <iframe width="560" height="315" src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe></div>
@@ -42,7 +49,7 @@ class Home extends Component {
                   
                 })
             }
-           {this.frame}
+           {this.frame} */}
             
             
             </div>
