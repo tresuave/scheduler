@@ -24,7 +24,7 @@ componentDidMount(){
         return (
             <div>
               <h1>Scheduler</h1> 
-              <table>
+              <table className="table">
                   <thead>
                 <tr>
                     <th>Week</th>
@@ -43,14 +43,14 @@ componentDidMount(){
                             schedulePiece=>
                             <tr key = {schedulePiece.id}>
                                 
-                                <td className="schedule">{schedulePiece.week}</td>
-                                <td className="schedule">{schedulePiece.monday}</td>
-                                <td className="schedule">{schedulePiece.tuesday}</td>
-                                <td className="schedule">{schedulePiece.wednesday}</td>
-                                <td className="schedule">{schedulePiece.thursday}</td>
-                                <td className="schedule">{schedulePiece.friday}</td>
-                                <td className="schedule">{schedulePiece.saturday}</td>
-                                <td className="schedule">{schedulePiece.sunday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.week}</td>
+                                <td scope="row" className="schedule">{schedulePiece.monday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.tuesday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.wednesday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.thursday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.friday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.saturday}</td>
+                                <td scope="row" className="schedule">{schedulePiece.sunday}</td>
 
                                 <button onClick={()=>{}}></button>
             
