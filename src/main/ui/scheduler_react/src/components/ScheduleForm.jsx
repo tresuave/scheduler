@@ -81,41 +81,68 @@ handleChangeSunday(event){
     render() {
       return (
         //   represents the input of the schedule
+        <div>
+
         <form onSubmit={this.handleSubmit}>
+          <div class="form-group">
           <label>
             Week:
-            <input type="text" value={this.state.week} onChange={this.handleChangeWeek} />
+            <input type="text" class="form-control" value={this.state.week} onChange={this.handleChangeWeek} />
           </label>
+          </div>
+
+          <div className="form-group">
           <label>
             Monday:
-            <input type="text" value={this.state.monday} onChange={this.handleChangeMonday} />
+            <input type="text" class="form-control" value={this.state.monday} onChange={this.handleChangeMonday} />
           </label>
+          </div>
+
+          <div className="form-group">
           <label>
             Tuesday:
-            <input type="text" value={this.state.tuesday} onChange={this.handleChangeTuesday} />
+            <input type="text" class="form-control" value={this.state.tuesday} onChange={this.handleChangeTuesday} />
           </label>
+
+          <div className="form-group">
+          </div>
           <label>
             Wednesday:
-            <input type="text" value={this.state.wednesday} onChange={this.handleChangeWednesday} />
+            <input type="text" class="form-control" value={this.state.wednesday} onChange={this.handleChangeWednesday} />
           </label>
+          </div>
+
+          <div className="form-group">
           <label>
             Thursday:
-            <input type="text" value={this.state.thursday} onChange={this.handleChangeThursday} />
+            <input type="text" class="form-control" value={this.state.thursday} onChange={this.handleChangeThursday} />
           </label>
+          </div>
+
+          <div className="form-group">
           <label>
             Friday:
-            <input type="text" value={this.state.friday} onChange={this.handleChangeFriday} />
+            <input type="text" class="form-control" value={this.state.friday} onChange={this.handleChangeFriday} />
           </label>
+          </div>
+
+          <div className="form-group">
           <label>
             Saturday:
-            <input type="text" value={this.state.saturday} onChange={this.handleChangeSaturday} />
+            <input type="text" class="form-control" value={this.state.saturday} onChange={this.handleChangeSaturday} />
           </label>
+          </div>
+
+          <div className="form-group">
           <label>
             Sunday:
-            <input type="text" value={this.state.sunday} onChange={this.handleChangeSunday} />
+            <input type="text" class="form-control" value={this.state.sunday} onChange={this.handleChangeSunday} />
           </label>
-          <input type="submit" value="Submit" />
+          </div>
+
+          <input type="submit" className="btn btn-success" value="Submit" />
         </form>
+        </div>
       );
     }
   }
