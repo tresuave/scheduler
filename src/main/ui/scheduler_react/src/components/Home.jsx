@@ -1,8 +1,52 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+// const requestTwo = axios.get(two);
+// const requestThree= axios.get(three);
+// const responseFour = response[3]
+// const responseFive = response[4]
+// const responseSix = response[5]
+// const responseSeven = response[6]
+// const responseEight = response[7]
+// const responseNine = response[8]
+// const responseTen = response[9]
+// const responseEleven = response[10]
+// const responseTwelve = response[11]
 
+// requestFour,requestFive,requestSix,requestSeven,requestEight,requestNine,requestTen,requestEleven,requestTwelve
+// const responseOne = responses[0]
+// const responseTwo = responses[1]
+// const responseThree = responses[2]
+// four:response[3],
+// five:response[4],
+// six:response[5],
+// seven:response[6],
+// eight:response[7],
+// nine:response[8],
+// ten:response[9],
+// eleven:response[10],
+// twelve:response[11]
 
+// const requestFour=axios.get(four)
+// const requestFive=axios.get(five)
+// const requestSix=axios.get(six)
+// const requestSeven=axios.get(seven)
+// const requestEight=axios.get(eight)
+// const requestNine=axios.get(nine)
+// const requestTen=axios.get(ten)
+// const requestEleven=axios.get(eleven)
+// const requestTwelve=axios.get(twelve)
+// const two = finalurl+chart.virgo
+//       const three = finalurl+chart.aries
+// const four=finalurl+chart.cancer
+// const five=finalurl+chart.capricorn
+// const six=finalurl+chart.gemini
+// const seven=finalurl+chart.leo
+// const eight=finalurl+chart.libra
+// const nine=finalurl+chart.pisces
+// const ten=finalurl+chart.sagittarius
+// const eleven=finalurl+chart.scorpio
+// const twelve=finalurl+chart.taurus
 const horoscope = "/horoscope/today/"
 const chart ={
  aries :"aries",
@@ -48,58 +92,28 @@ class Home extends Component {
 
      }   
     clicked=()=>{
-      const one=finalurl+chart.aquarius,
-      const two=finalurl+chart.virgo,
-      const three=finalurl+chart.aries,
-      const four=finalurl+chart.cancer,
-      const five=finalurl+chart.capricorn,
-      const six=finalurl+chart.gemini,
-      const seven=finalurl+chart.leo,
-      const eight=finalurl+chart.libra,
-      const nine=finalurl+chart.pisces,
-      const ten=finalurl+chart.sagittarius,
-      const eleven=finalurl+chart.scorpio,
-      const twelve=finalurl+chart.taurus,
+      const one = finalurl+chart.aquarius
+      
+    console.log(one)
 
-      const requestOne = axios.get(one)
-      const requestTwo =axios.get(two)
-      const requestThree=axios.get(three)
-      const requestFour=axios.get(four)
-      const requestFive=axios.get(five)
-      const requestSix=axios.get(six)
-      const requestSeven=axios.get(seven)
-      const requestEight=axios.get(eight)
-      const requestNine=axios.get(nine)
-      const requestTen=axios.get(ten)
-      const requestEleven=axios.get(eleven)
-      const requestTwelve=axios.get(twelve)
-
-        axios.all(requestOne,requestTwo,requestThree,requestFour,requestFive,requestSix,requestSeven,requestEight,requestNine,requestTen,requestEleven,requestTwelve)
-    .then(axios.spread((...response=> {
-        responseOne = response[0],
-        responseTwo = response[1],
-        responseThree = response[2],
-        responseFour = response[3],
-        responseFive = response[4],
-        responseSix = response[5],
-        responseSeven = response[6],
-        responseEight = response[7],
-        responseNine = response[8],
-        responseTen = response[9],
-        responseEleven = response[10],
-        responseTwelve = response[11]
-    }
-         this.setState({more: response.data}
-            )
-    )
+      axios.get(one).then(response=> {
+        this.setState({
+            one: response.data,
+           
  
-}
+    })
+    })
+    }
+
+    
+
+
    
     render() {
-        
+       
         return (
-            <div>
-                <button onClick={this.clicked}></button>
+            <div className="card">
+                <button className="btn btn-primary"onClick={this.clicked}></button>
                     <table>
                         <thead>
                         <tr>
@@ -110,8 +124,9 @@ class Home extends Component {
                         </thead>
                         <tbody>
                             <tr>
-                          <td>{this.state.more.sunsign}</td>       
-                        <td>{this.state.more.horoscope}</td>
+                          <td className="card-text">{this.state.one.sunsign}</td>   
+                           
+                        <td>{this.state.one.horoscope}</td>
                         
                         </tr>
                         </tbody>
