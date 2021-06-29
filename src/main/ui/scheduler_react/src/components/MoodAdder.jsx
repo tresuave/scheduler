@@ -79,14 +79,18 @@ handleChangeSunday(event){
   
     render() {
       return (
+        <div className="d-flex flex-column">
         <form onSubmit={this.handleSubmit}>
-          <label>
+          <div></div>
+          <label class="p-2">
             Week:
             <input type="text" value={this.state.week} onChange={this.handleChangeWeek} />
           </label>
-          <label>
+
+          <div class="p-2">
+          <label class="">
             Monday:
-            <select value={this.state.monday} onChange={this.handleChangeMonday} >
+            <select class="custom-select" value={this.state.monday} onChange={this.handleChangeMonday} >
             <option value="👀">👀</option>
             <option value="😀"> 😀 </option>
             <option value="🙃">🙃 </option>
@@ -100,11 +104,14 @@ handleChangeSunday(event){
             <option value="😈">😈 </option>
             <option value="😳">😳 </option>  
           </select>
-    
           </label>
-          <label>
+          </div>
+
+
+          <div class="p-2">
+          <label class="">
             Tuesday:
-            <select value={this.state.tuesday} onChange={this.handleChangeTuesday}>
+            <select class="custom-select" value={this.state.tuesday} onChange={this.handleChangeTuesday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
@@ -119,9 +126,12 @@ handleChangeSunday(event){
             <option value="😳">😳</option>  
           </select>
           </label>
-          <label>
+          </div>
+
+          <div class="p-2">
+          <label class="">
             Wednesday:
-            <select value={this.state.wednesday} onChange={this.handleChangeWednesday}>
+            <select class="custom-select" value={this.state.wednesday} onChange={this.handleChangeWednesday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
@@ -136,9 +146,12 @@ handleChangeSunday(event){
             <option value="😳">😳</option>  
           </select>
           </label>
-          <label>
+          </div>
+
+          <div class="p-2">
+          <label class="">
             Thursday:
-            <select value={this.state.thursday} onChange={this.handleChangeThursday}>
+            <select class="custom-select" value={this.state.thursday} onChange={this.handleChangeThursday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
@@ -153,9 +166,12 @@ handleChangeSunday(event){
             <option value="😳">😳</option>  
           </select>
           </label>
-          <label>
+          </div>
+
+          <div class="p-2">
+          <label class="">
             Friday:
-            <select value={this.state.friday} onChange={this.handleChangeFriday}>
+            <select class="custom-select" value={this.state.friday} onChange={this.handleChangeFriday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
@@ -170,9 +186,13 @@ handleChangeSunday(event){
             <option value="😳">😳</option>  
           </select>
           </label>
-          <label>
+          </div>
+
+
+          <div class="p-2">
+          <label class="">
             Saturday:
-            <select value={this.state.saturday} onChange={this.handleChangeSaturday}>
+            <select class="custom-select" value={this.state.saturday} onChange={this.handleChangeSaturday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
             <option value="🙃">🙃"</option>
@@ -187,12 +207,16 @@ handleChangeSunday(event){
             <option value="😳">😳</option>  
           </select>
           </label>
-          <label>
+          </div>
+
+
+          <div class="p-2">
+          <label class="">
             Sunday:
-            <select value={this.state.sunday} onChange={this.handleChangeSuday}>
+            <select class="custom-select" value={this.state.sunday} onChange={this.handleChangeSuday}>
             <option value="👀">👀</option>
             <option value="😀">😀</option>
-            <option value="🙃">🙃"</option>
+            <option value="🙃">🙃</option>
             <option value="😐">😐</option>
             <option value="😎">😎</option>
             <option value="🤬">🤬</option>
@@ -204,8 +228,11 @@ handleChangeSunday(event){
             <option value="😳">😳</option>  
           </select>
           </label>
-          <input type="submit" value="Submit" />
+          </div>
+
+          <input class="btn-success btn-lg" type="submit" value="Submit" />
         </form>
+        </div>
       );
     }
   }
