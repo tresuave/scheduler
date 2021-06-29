@@ -31,8 +31,8 @@ componentDidMount(){
             <div>
                 {/* table for the mood tracker */}
               <h1>Mood Tracker</h1> 
-              <table>
-                  <thead>
+              <table className="table">
+                  <thead className="thead-light">
                 <tr>
                     <th>Week</th>
                     <th>Monday</th>
@@ -51,14 +51,14 @@ componentDidMount(){
                             // id makes the application work
                             <tr key = {Mood.id}>
                                 
-                                <td className="mood">{Mood.week}</td>
-                                <td className="mood">{Mood.monday}</td>
-                                <td className="mood">{Mood.tuesday}</td>
-                                <td className="mood">{Mood.wednesday}</td>
-                                <td className="mood">{Mood.thursday}</td>
-                                <td className="mood">{Mood.friday}</td>
-                                <td className="mood">{Mood.saturday}</td>
-                                <td className="mood">{Mood.sunday}</td>
+                                <td scope="row" className="mood">{Mood.week}</td>
+                                <td scope="row" className="mood">{Mood.monday}</td>
+                                <td scope="row" className="mood">{Mood.tuesday}</td>
+                                <td scope="row" className="mood">{Mood.wednesday}</td>
+                                <td scope="row" className="mood">{Mood.thursday}</td>
+                                <td scope="row" className="mood">{Mood.friday}</td>
+                                <td scope="row" className="mood">{Mood.saturday}</td>
+                                <td scope="row" className="mood">{Mood.sunday}</td>
                                 <td>
                                 <button onClick={()=>{this.deleteMood(Mood.id)}}>Delete</button>
                               

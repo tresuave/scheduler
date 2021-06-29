@@ -24,8 +24,8 @@ componentDidMount(){
         return (
             <div>
               <h1>Scheduler</h1> 
-              <table className="table">
-                  <thead>
+              <table className="table table-striped">
+                  <thead className="thead-dark">
                 <tr>
                     <th>Week</th>
                     <th>Monday</th>
