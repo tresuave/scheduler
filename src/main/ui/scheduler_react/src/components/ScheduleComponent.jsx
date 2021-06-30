@@ -33,7 +33,9 @@ componentDidMount(){
     render() {
         return (
             <div>
-              <h1>Scheduler</h1> 
+              <h1>Scheduler</h1>
+
+             
               <table className="table table-striped">
                   <thead className="thead-dark">
                 <tr>
@@ -64,15 +66,15 @@ componentDidMount(){
 
                              
                <button onClick={()=>{this.deleteSchedule(schedulePiece.id)}}>Delete</button>
-               <button onClick={()=>{this.renderForm()}}>Edit</button>
+               <button onClick={()=>{this.UpdateSched()}}>Edit</button>
                             </tr>
                         )
                     }
                 </tbody>
                   
                   </table> 
-
-                  <UpdateSchedule />
+                  <UpdateSchedule /> 
+                  
             </div>
         );
 

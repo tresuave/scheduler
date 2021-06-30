@@ -6,7 +6,6 @@ class UpdateSchedule extends Component {
         super(props)
 
         this.state = {
-            id: this.props.match.params.id,
             week: '',
             monday: '',
             tuesday: '',
@@ -33,9 +32,9 @@ class UpdateSchedule extends Component {
         let schedule = {week: this.state.week, monday: this.state.monday, tuesday: this.state.tuesday, wednesday: this.state.wednesday, thursday: this.state.thursday, friday: this.state.friday, saturday: this.state.saturday, sunday: this.state.sunday};
         console.log('schedule => ' + JSON.stringify(schedule));
         console.log('id => ' + JSON.stringify(this.state.id));
-       ScheduleService.UpdateSchedule(schedule, this.state.id).then( res => {
+       ScheduleService.updateSchedule(schedule, this.state.id).then(( response => {
             this.props.history.push('/schedule');
-        });
+        }));
     }
     
     changeWeek= (event) => {
