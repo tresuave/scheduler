@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ScheduleService from '../services/ScheduleService';
-
+import axios from 'axios';
 
 class ScheduleComponent extends Component {
     constructor(props){
@@ -10,7 +10,15 @@ class ScheduleComponent extends Component {
            scheduleData:[]
         }
     };
-
+    deleteSchedule(id){
+        axios.delete(`http://localhost:8000/schedule/${id}`)
+        window.location.reload();
+    
+    }
+    updateSchedule(id){
+        axios.post(`http://localhost:8000/schedule/${id}`)
+        
+    }
     // will mount Schedules from the database
 componentDidMount(){
     ScheduleService.getSchedule().then((response)=>{
@@ -52,8 +60,9 @@ componentDidMount(){
                                 <td scope="row" className="schedule">{schedulePiece.saturday}</td>
                                 <td scope="row" className="schedule">{schedulePiece.sunday}</td>
 
-                                <button onClick={()=>{}}></button>
-            
+                             
+               <button onClick={()=>{this.deleteSchedule(schedulePiece.id)}}>Delete</button>
+               <button onClick={()=>{this.updateSchedule(schedulePiece.id)}}>Edit</button>
                             </tr>
                         )
                     }

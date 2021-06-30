@@ -47,7 +47,7 @@ import axios from 'axios';
 // const ten=finalurl+chart.sagittarius
 // const eleven=finalurl+chart.scorpio
 // const twelve=finalurl+chart.taurus
-const horoscope = "/horoscope/today/"
+const horoscope = "/horoscope/week/"
 const chart ={
  aries :"aries",
 taurus:"taurus",
@@ -85,14 +85,9 @@ class Home extends Component {
         };
         this.clicked = this.clicked.bind(this);
     }
-     close(){
-         <style>
-          
-             display:none;</style>
-
-     }   
+  
     clicked=()=>{
-      const one = finalurl+chart.aquarius
+      const one = finalurl+chart.sagittarius
       
     console.log(one)
 
@@ -113,7 +108,7 @@ class Home extends Component {
        
         return (
             <div className="card">
-                <button className="btn btn-primary"onClick={this.clicked}>Aquarius</button>
+                <button className="btn btn-primary"onClick={this.clicked}>Sagittarius</button>
                     <table>
                         <thead>
                         <tr>

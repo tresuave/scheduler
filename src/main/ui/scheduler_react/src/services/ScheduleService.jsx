@@ -10,6 +10,7 @@ class ScheduleService {
     createSchedule(){
         return axios.post(SERVICE_DOM)
     }
+ 
 }
 
 export default new ScheduleService();
