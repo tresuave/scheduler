@@ -47,7 +47,7 @@ import axios from 'axios';
 // const ten=finalurl+chart.sagittarius
 // const eleven=finalurl+chart.scorpio
 // const twelve=finalurl+chart.taurus
-const horoscope = "/horoscope/week/"
+const horoscope = "/horoscope/year/"
 const chart ={
  aries :"aries",
 taurus:"taurus",
@@ -113,7 +113,7 @@ class Home extends Component {
                         <thead>
                         <tr>
                         <th>Sign</th>
-                        <th>Horscope</th>
+                        <th>Horoscope</th>
                        
                         </tr>
                         </thead>

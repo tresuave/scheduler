@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import ScheduleService from '../services/ScheduleService';
 import axios from 'axios';
 
+
 class ScheduleComponent extends Component {
     constructor(props){
         super (props)
         // make use of state
         this.state = {
-           scheduleData:[]
+           scheduleData:[],
+           edit:false
         }
     };
     deleteSchedule(id){
@@ -15,10 +17,13 @@ class ScheduleComponent extends Component {
         window.location.reload();
     
     }
+
+
     updateSchedule(id){
-        axios.post(`http://localhost:8000/schedule/${id}`)
+        axios.patch(`http://localhost:8000/schedule/${id}`)
         
     }
+
     // will mount Schedules from the database
 componentDidMount(){
     ScheduleService.getSchedule().then((response)=>{
@@ -62,13 +67,15 @@ componentDidMount(){
 
                              
                <button onClick={()=>{this.deleteSchedule(schedulePiece.id)}}>Delete</button>
-               <button onClick={()=>{this.updateSchedule(schedulePiece.id)}}>Edit</button>
+               <button onClick={()=>{this.renderForm()}}>Edit</button>
                             </tr>
                         )
                     }
                 </tbody>
                   
                   </table> 
+
+                  
             </div>
         );
 
