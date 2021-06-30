@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ScheduleService from '../services/ScheduleService';
 import axios from 'axios';
+import UpdateSchedule from './UpdateSchedule';
 
 
 class ScheduleComponent extends Component {
@@ -19,10 +20,6 @@ class ScheduleComponent extends Component {
     }
 
 
-    updateSchedule(id){
-        axios.patch(`http://localhost:8000/schedule/${id}`)
-        
-    }
 
     // will mount Schedules from the database
 componentDidMount(){
@@ -75,7 +72,7 @@ componentDidMount(){
                   
                   </table> 
 
-                  
+                  <UpdateSchedule />
             </div>
         );
 
